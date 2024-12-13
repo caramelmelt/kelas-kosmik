@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas Kosmik</title>
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background: linear-gradient(black, #38073b);
+            font-family: 'Acme', sans-serif;
+        }
+
+        .konten{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            padding: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        } *
+
+        .konten::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top,#c4c2c3,transparent );
+            z-index: 1000;
+        }
+        .konten img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #text{
+            position: absolute;
+            font-size: 3em;
+            color: white;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 3px 3px 10px grey;
+            top: 70px;
+            z-index: 2000;
+        }
+        .konten-card{
+            top: 0;
+            z-index: 2000;
+        }
+        .konten-card .card{
+            font-size: 20px;
+            color: #38073b;
+            background-color: #ef9ff3;
+            letter-spacing: 2px;
+            text-align: center;
+            box-shadow: 3px 3px 10px rgb(252, 200, 228) ;
+        }
+        a{
+            text-decoration: none;
+        }
+        .card{
+            transition: transform 0.3 ease, box-shadow 0.3 ease;
+        }
+        .card:hover{
+            transform: scale(1.15);
+            background-color: #bbd1f5;
+            color: #051b3f ;
+            box-shadow: 3px 3px 10px rgb(221, 233, 238) ;
+            cursor: pointer;
+        }
+        #text2{
+            position: absolute;
+            font-size: 3em;
+            color: white;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 3px 3px 10px white;
+            bottom: -100px;
+        }
+        .konten img#meteorid{
+            z-index: 100;
+        }
+        img#astro{
+            position: absolute;
+            z-index: 4000;
+            bottom: 0;
+        }
+        #button{
+            position: absolute;
+            font-size: 1em;
+            color: white;
+            background-color: #38073b;
+            padding: 10px 50px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="konten">
+        <audio src="img/select2.mp3" id="click-sound"></audio>
+        <img src="img/meteorid.png" id="meteorid">
+        <h1 id="text">Kelas Kosmik<br></h1>
+        <div class="konten-card mt-5 d-flex col-12 justify-content-center align-items-center">
+            <div class="col-4 mx-5">
+                <a href="tatasurya.html" onclick="playSound(event)">
+                    <div class="card p-4">
+                        <div class="card-body">
+                          Jelajah Tata Surya 🌌
+                        </div>
+                    </div>
+                </a>
+                <a href="fenomena.html" onclick="playSound(event)">
+                    <div class="card p-4 my-5">
+                        <div class="card-body">
+                          Fenomena Luar Angkasa 🛸
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 mx-5">
+                <a href="bumi-satelit.html">
+                    <div class="card p-4">
+                        <div class="card-body">
+                          Bumi dan Satelitnya 🌍
+                        </div>
+                    </div>
+                </a>
+                <a href="teori-tatasurya.html">
+                    <div class="card p-4 my-5">
+                        <div class="card-body">
+                          Teori Terbentuknya Tata Surya ☄️
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 mx-5">
+                <a href="misi-bulan.html">
+                    <div class="card p-4">
+                        <div class="card-body">
+                          Misi ke Bulan 🌕
+                        </div>
+                    </div>
+                </a>
+                <a href="kuis.html">
+                    <div class="card p-4 my-5">
+                        <div class="card-body">
+                          Kuis bersama Astro 🪐
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function playSound() {
+            function playSound(event) { event.preventDefault(); var audio = document.getElementById('click-sound'); audio.play(); audio.onended = function() { window.location.href = event.currentTarget.href; }; 
+        }
+    }
+        AOS.init();
+    </script>
+</body>
+</html>

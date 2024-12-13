@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas Kosmik</title>
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background: linear-gradient(black, #38073b);
+            font-family: 'Acme', sans-serif;
+        }
+
+        .konten{
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 70px;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            overflow: hidden;
+        } *
+
+        .konten::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top,#c4c2c3,transparent );
+            z-index: 1000;
+        }
+        .container{
+            box-sizing: border-box;
+            background-color: rgb(250, 243, 231);
+            border: 0.5rem solid orange;
+            width: 100%;
+            border-radius: 2rem;
+        }
+        /* .konten img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } */
+        #text{
+            position: absolute;
+            font-size: 3em;
+            color: white;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 3px 3px 10px grey;
+            top: 70px;
+            z-index: 2000;
+        }
+        /* .konten-card{
+            top: 0;
+            z-index: 2000;
+        } */
+         h3{
+            color: #b907b0;
+         }
+        a{
+            text-decoration: none;
+        }
+        p{
+            font-size: 20px;
+        }
+        .teks-konten, .gambar-konten{
+            display: none;
+        }
+        .teks-konten.active, .gambar-konten.active{
+            display: block;
+        }
+        i{
+            cursor: pointer;
+        }
+        @keyframes rotate {
+             from { transform: rotate(0deg); 
+            } 
+            to {
+                 transform: rotate(360deg); 
+                } 
+            }
+            .rotate { 
+                animation: rotate 10s linear infinite; 
+            }
+        /* .card{
+            background-color: white;
+            transition: transform 0.3 ease, box-shadow 0.3 ease;
+            bottom: 0;
+            right: 0;
+            letter-spacing: 1px;
+            border-radius: 3rem;
+        }
+        #text2{
+            position: absolute;
+            font-size: 3em;
+            color: white;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 3px 3px 10px white;
+            bottom: -100px;
+        }
+        .konten img#meteorid{
+            z-index: 100;
+        }
+        img#astro{
+            position: absolute;
+            z-index: 4000;
+            bottom: 0;
+        }
+        #button{
+            position: absolute;
+            font-size: 1em;
+            color: white;
+            background-color: #38073b;
+            padding: 10px 50px;
+            border-radius: 20px;
+            text-decoration: none;
+        } */
+    </style>
+</head>
+<body>
+    <div class="konten">
+        <div class="container py-4 px-5">
+            <h2 class="text-center">Bumi dan Satelitnya</h2>
+
+            <div class="d-flex justify-content-between align-items-center" style="gap: 3rem;">
+                <img src="img/png/satelit.png" id="gambar-konten1" class="gambar-konten active">
+                <img src="img/png/bumi.png" id="gambar-konten2" class="gambar-konten rotate">
+                <img src="img/GPS.webp" id="gambar-konten3" class="gambar-konten">
+                <img src="img/HST-SM4.jpeg" id="gambar-konten4" class="gambar-konten">
+
+                <div id="teks-konten1" class="teks-konten active text-center">
+                    <h3>Apa itu Satelit?</h3>
+                    <p>Satelit adalah benda yang mengorbit sebuah objek yang lebih besar di luar angkasa, seperti planet atau bintang, berdasarkan prinsip gravitasi. Ada dua jenis utama satelit: satelit alami dan satelit buatan.
+                    </p>
+                </div>
+                <div id="teks-konten2" class="teks-konten text-center">
+                    <h3>Satelit Alami Bumi</h3>
+                    <p>Bulan adalah satu-satunya satelit alami Bumi yang telah dikenal dan dipelajari sejak zaman kuno. Bulan mengorbit Bumi dalam waktu sekitar 27,3 hari dan memainkan peran penting dalam berbagai fenomena alam di Bumi, seperti pasang surut air laut dan stabilitas rotasi planet kita. Dengan diameter sekitar 3.474 kilometer, Bulan adalah objek terbesar dan paling terang di langit malam setelah Matahari. Bulan juga telah menjadi tujuan utama dalam penjelajahan luar angkasa manusia, dengan misi Apollo yang pertama kali mendaratkan manusia di Bulan pada tahun 1969.</p>
+                </div>
+                <div id="teks-konten3" class="teks-konten text-center">
+                    <h3>Satelit Buatan(GPS Satelite)</h3>
+                    <p>GPS Satellites adalah sistem navigasi berbasis satelit yang memungkinkan pengguna di seluruh dunia menentukan lokasi mereka dengan akurasi tinggi. Terdiri dari 24 satelit utama yang mengorbit Bumi, sistem ini menggunakan sinyal waktu dan informasi posisi dari satelit untuk menghitung lokasi pengguna melalui metode trilateration. GPS digunakan dalam berbagai bidang, dari militer hingga navigasi sehari-hari, dan dapat mencapai akurasi beberapa meter, atau bahkan sentimeter dengan teknologi tambahan. Sistem ini dikembangkan dan dikelola oleh Departemen Pertahanan Amerika Serikat.
+                    </p>
+                </div>
+                <div id="teks-konten4" class="teks-konten text-center">
+                    <h3>Satelit Buatan(Hubble Space Telescope)</h3>
+                    <p>Hubble Space Telescope adalah teleskop luar angkasa yang diluncurkan oleh NASA dan ESA pada tahun 1990 untuk mengamati bintang, galaksi, dan benda langit lainnya. Mengorbit Bumi pada ketinggian sekitar 547 km, Hubble dilengkapi dengan instrumen canggih untuk mengamati berbagai panjang gelombang cahaya. Teleskop ini telah membantu menemukan banyak penemuan penting seperti mengukur kecepatan ekspansi alam semesta dan mengamati galaksi-galaksi jauh. Dirancang untuk dapat dirawat dan ditingkatkan, Hubble masih aktif beroperasi dan akan dibantu oleh teleskop baru seperti James Webb Space Telescope di masa depan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="btn-navigasi d-flex justify-content-end" style="gap: 1rem;">
+                <a href="halaman-utama.html">
+                    <button class="btn btn-danger rounded-circle fs-4"><i class="bi bi-house-fill"></i></button>
+                </a>
+                <i class="bi bi-caret-left-square-fill text-secondary fs-1" id="prevBtn"></i>
+                <i class="bi bi-caret-right-square-fill text-secondary fs-1" id="nextBtn"></i>
+            </div>
+        </div>
+        <!-- <img src="img/meteorid.png" id="meteorid"> -->
+        <!-- <h1 id="text">Kelas Kosmik<br></h1> -->
+        <!-- <div class="konten-card mt-5 d-flex col-12 justify-content-center"> -->
+           
+
+    </div>
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        const texts = document.querySelectorAll('.teks-konten');
+        const images = document.querySelectorAll('.gambar-konten');
+        let currentIndex = 0;
+
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function updateContent() {
+            texts.forEach((text, index) => {
+                text.classList.remove('active');
+                if (index === currentIndex) {
+                    text.classList.add('active');
+                }
+            });
+
+            images.forEach((image, index) => {
+                image.classList.remove('active');
+                if (index === currentIndex) {
+                    image.classList.add('active');
+                }
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateContent();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < texts.length - 1) {
+                currentIndex++;
+                updateContent();
+            }
+        });
+
+        // Inisialisasi konten pertama
+        updateContent();
+
+    </script>
+</body>
+</html>

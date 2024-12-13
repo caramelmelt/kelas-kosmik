@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas Kosmik</title>
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body{
+            background: linear-gradient(black, #38073b);
+            font-family: 'Acme', sans-serif;
+        }
+        .konten{
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 70px;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            overflow: hidden;
+        } *
+        .konten::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top,#c4c2c3,transparent );
+            z-index: 1000;
+        }
+        .container{
+            box-sizing: border-box;
+            background-color: rgb(250, 243, 231);
+            border: 0.5rem solid orange;
+            width: 100%;
+            border-radius: 2rem;
+        }
+        /* .konten img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } */
+        #text{
+            position: absolute;
+            font-size: 3em;
+            color: white;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 3px 3px 10px grey;
+            top: 70px;
+            z-index: 2000;
+        }
+        /* .konten-card{
+            top: 0;
+            z-index: 2000;
+        } */
+        a{
+            text-decoration: none;
+        }
+        p{
+            font-size: 20px;
+        }
+        .teks-konten, .gambar-konten{
+            display: none;
+        }
+        .teks-konten{
+            min-height: 25rem;
+        }
+        .teks-konten.active, .gambar-konten.active{
+            display: block;
+        }
+        i{
+            cursor: pointer;
+        }
+        img{
+            max-width: 50%;
+        }
+        /* .card{
+            background-color: white;
+            transition: transform 0.3 ease, box-shadow 0.3 ease;
+            bottom: 0;
+            right: 0;
+            letter-spacing: 1px;
+            border-radius: 3rem;
+        }
+        #text2{
+            position: absolute;
+            font-size: 3em;
+            color: white;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 3px 3px 10px white;
+            bottom: -100px;
+        }
+        .konten img#meteorid{
+            z-index: 100;
+        }
+        img#astro{
+            position: absolute;
+            z-index: 4000;
+            bottom: 0;
+        }
+        #button{
+            position: absolute;
+            font-size: 1em;
+            color: white;
+            background-color: #38073b;
+            padding: 10px 50px;
+            border-radius: 20px;
+            text-decoration: none;
+        } */
+    </style>
+</head>
+<body>
+    <div class="konten">
+        <div class="container py-4 px-5">
+            <h2 class="text-center">Fenomena Luar Angkasa</h2>
+
+            <div class="d-flex justify-content-between align-items-center" style="gap: 3rem;">
+                <img src="img/fenomena.jpg" id="gambar-konten1" class="gambar-konten active">
+                <img src="img/supernova.jpg" id="gambar-konten2" class="gambar-konten">
+                <img src="img/black hole.jpg" id="gambar-konten3" class="gambar-konten">
+                <img src="img/aurora.jpg" id="gambar-konten4" class="gambar-konten">
+                <img src="img/badai matahari.jpg" id="gambar-konten5" class="gambar-konten">
+                <img src="img/galaksi spiral.jpg" id="gambar-konten6" class="gambar-konten">
+                <img src="img/eksoplanet.jpg" id="gambar-konten7" class="gambar-konten">
+                <img src="img/pulsar.jpg" id="gambar-konten8" class="gambar-konten">
+                <img src="img/tabrakan.jpg" id="gambar-konten9" class="gambar-konten">
+                <img src="img/quasar.jpg" id="gambar-konten10" class="gambar-konten">
+
+                <div id="teks-konten1" class="teks-konten active text-center">
+                    <h3>1. Hujan Meteor</h3>
+                    <p>
+                         Hujan meteor terjadi ketika Bumi melewati jejak partikel yang ditinggalkan oleh komet atau asteroid. Ketika partikel-partikel ini memasuki atmosfer Bumi, mereka terbakar dan menciptakan garis-garis cahaya yang kita kenal sebagai meteor. Beberapa hujan meteor yang terkenal adalah Perseid, yang terjadi setiap bulan Agustus, dan Geminid, yang terjadi setiap bulan Desember.
+                    </p>
+                </div>
+                <div id="teks-konten2" class="teks-konten text-center">
+                    <h3>2. Supernova</h3>
+                    <p>Supernova adalah ledakan dahsyat yang terjadi pada akhir siklus hidup sebuah bintang besar. Ledakan ini melepaskan energi yang sangat besar dan dapat bersinar lebih terang dari seluruh galaksi untuk sementara waktu. Supernova memainkan peran penting dalam penciptaan elemen berat di alam semesta dan dapat membentuk nebula yang indah seperti Nebula Kepiting.</p>
+                </div>
+                <div id="teks-konten3" class="teks-konten text-center">
+                    <h3>3. Black Hole (Lubang Hitam)</h3>
+                    <p>Lubang hitam adalah objek yang terbentuk ketika sebuah bintang masif runtuh ke dalam dirinya sendiri di akhir siklus hidupnya, menciptakan area di ruang angkasa dengan gravitasi yang sangat kuat sehingga bahkan cahaya tidak bisa lolos. Black hole sering dikelilingi oleh piringan akresi yang bersinar karena materi yang jatuh ke dalamnya.
+                    </p>
+                </div>
+                <div id="teks-konten4" class="teks-konten text-center">
+                    <h3>4. Aurora</h3>
+                    <p>Aurora, juga dikenal sebagai cahaya utara (Aurora Borealis) di belahan bumi utara dan cahaya selatan (Aurora Australis) di belahan bumi selatan, adalah fenomena cahaya alami yang menakjubkan yang terjadi ketika partikel bermuatan dari angin matahari berinteraksi dengan medan magnet Bumi. Partikel ini terperangkap di atmosfer bagian atas dan menyebabkan pancaran cahaya berwarna-warni.
+                    </p>
+                </div>
+                <div id="teks-konten5" class="teks-konten text-center">
+                    <h3>5. Badai Matahari</h3>
+                    <p>Badai matahari terjadi ketika ada letusan besar energi di permukaan Matahari, yang mengirim partikel bermuatan dan radiasi ke luar angkasa. Badai matahari dapat mempengaruhi komunikasi radio, sistem navigasi, dan bahkan mengganggu jaringan listrik di Bumi.
+                    </p>
+                </div>
+                <div id="teks-konten6" class="teks-konten text-center">
+                    <h3>6. Galaksi Spiral</h3>
+                    <p>Galaksi spiral, seperti galaksi kita, Bima Sakti, memiliki struktur yang indah dengan lengan spiral yang berputar keluar dari pusat galaksi. Lengan-lengan ini penuh dengan bintang muda, gas, dan debu, serta sering menjadi tempat kelahiran bintang baru.
+                    </p>
+                </div>
+                <div id="teks-konten7" class="teks-konten text-center">
+                    <h3>7. Eksoplanet</h3>
+                    <p>Eksoplanet adalah planet yang mengorbit bintang di luar sistem tata surya kita. Penemuan eksoplanet pertama kali terjadi pada tahun 1992, dan sejak itu, ribuan eksoplanet telah ditemukan. Beberapa eksoplanet berada di zona laik huni bintang mereka, di mana kondisi bisa mendukung kehidupan.
+                    </p>
+                </div>
+                <div id="teks-konten8" class="teks-konten text-center">
+                    <h3>8. Pulsar</h3>
+                    <p>Pulsar adalah jenis bintang neutron yang berputar sangat cepat dan memancarkan sinar radio yang sangat kuat. Sinar ini terlihat dari Bumi sebagai denyut radio reguler, mirip dengan mercusuar. Pulsar pertama kali ditemukan pada tahun 1967 oleh Jocelyn Bell Burnell.
+                    </p>
+                </div>
+                <div id="teks-konten9" class="teks-konten text-center">
+                    <h3>9. Tabrakan Galaksi</h3>
+                    <p>Ketika dua galaksi bertabrakan, mereka bisa membentuk galaksi baru yang lebih besar. Proses ini sering menghasilkan daerah pembentukan bintang yang intens dan bisa menciptakan struktur galaksi yang unik. Misalnya, Galaksi Antena adalah hasil dari tabrakan dua galaksi spiral.
+                    </p>
+                </div>
+                <div id="teks-konten10" class="teks-konten text-center">
+                    <h3>10. Quasar</h3>
+                    <p>Quasar adalah inti galaksi yang sangat terang dengan lubang hitam supermasif di pusatnya. Quasar adalah beberapa objek paling terang di alam semesta dan dapat melepaskan energi ratusan kali lipat dari seluruh galaksi. Quasar ditemukan pada 1960-an dan masih menjadi subjek penelitian intensif.
+                    </p>
+                </div>
+            </div>
+
+            <div class="btn-navigasi d-flex justify-content-end" style="gap: 1rem;">
+                <a href="halaman-utama.html">
+                    <button class="btn btn-danger rounded-circle fs-4"><i class="bi bi-house-fill"></i></button>
+                </a>
+                <i class="bi bi-caret-left-square-fill text-secondary fs-1" id="prevBtn"></i>
+                <i class="bi bi-caret-right-square-fill text-secondary fs-1" id="nextBtn"></i>
+            </div>
+        </div>
+        <!-- <img src="img/meteorid.png" id="meteorid"> -->
+        <!-- <h1 id="text">Kelas Kosmik<br></h1> -->
+        <!-- <div class="konten-card mt-5 d-flex col-12 justify-content-center"> -->
+           
+
+    </div>
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        const texts = document.querySelectorAll('.teks-konten');
+        const images = document.querySelectorAll('.gambar-konten');
+        let currentIndex = 0;
+
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function updateContent() {
+            texts.forEach((text, index) => {
+                text.classList.remove('active');
+                if (index === currentIndex) {
+                    text.classList.add('active');
+                }
+            });
+
+            images.forEach((image, index) => {
+                image.classList.remove('active');
+                if (index === currentIndex) {
+                    image.classList.add('active');
+                }
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateContent();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < texts.length - 1) {
+                currentIndex++;
+                updateContent();
+            }
+        });
+
+        // Inisialisasi konten pertama
+        updateContent();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelajah Tata Surya - Kelas Kosmik</title>
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background: linear-gradient(black, #38073b);
+            font-family: 'Acme', sans-serif;
+        }
+
+        .konten{
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 5rem;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .konten::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top,#c4c2c3,transparent );
+            z-index: 1000;
+        }
+        #text{
+            position: absolute;
+            font-size: 3em;
+            color: white;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 3px 3px 10px grey;
+            top: 70px;
+            z-index: 2000;
+        }
+        a{
+            text-decoration: none;
+        }
+        #text2{
+            position: absolute;
+            font-size: 3em;
+            color: white;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 3px 3px 10px white;
+            bottom: -100px;
+        }
+        .konten img#meteorid{
+            z-index: 100;
+        }
+        img#astro{
+            position: absolute;
+            z-index: 4000;
+            bottom: 0;
+        }
+        .card{
+            background-color: rgb(227, 206, 240);
+            transition: transform 0.3 ease, box-shadow 0.3 ease;
+            /* bottom: 0; */
+            /* right: 0; */
+            letter-spacing: 1px;
+            border-radius: 3rem;
+        }
+        #button{
+            font-size: 1em;
+            background-color: #c4c2c3;
+            border-radius: 20px;
+        }
+        @keyframes rotate {
+             from { transform: rotate(0deg); 
+            } 
+            to {
+                 transform: rotate(360deg); 
+                } 
+            }
+            .rotate { 
+                animation: rotate 10s linear infinite; 
+            }
+    </style>
+</head>
+<body>
+    <div class="konten">
+        <!-- <img src="img/meteorid.png" id="meteorid"> -->
+        <h1 id="text">Anggota Tata Surya<br></h1>
+        
+        <!-- <div data-aos="fade-right">
+            <div class="col-8 d-flex justify-content-start">
+                <div class="card p-3">
+                    <div class="card-title">
+                        <h5>Sekarang, Astro akan mengajak kalian untuk mengenal anggota dari tata surya kita! Ayo mulai petualangannya!</h5>
+                    </div>
+                </div>
+            </div> -->
+            
+            <div class="row d-flex justify-content-evenly mt-5">
+                <div class="col-4">
+                    <img src="img/png/matahari.png" class="img-fluid rotate">
+                </div>
+                <div class="col-6">
+                    <div class="card p-2">
+                        <div class="card-title text-center h2">
+                            Matahari
+                        </div>
+                        <div class="card-body">
+                            Sebagai pusat tata surya, Matahari adalah bintang besar yang memberi kita cahaya dan energi. Tanpa Matahari, tidak akan ada kehidupan di Bumi. Matahari juga mengendalikan semua planet di tata surya dengan gravitasinya yang kuat.
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-4">
+                    <img src="img/png/merkurius.png" class="img-fluid rotate">
+                </div>
+                <div class="col-6">
+                    <div class="card p-3">
+                        <div class="card-title text-center h2">
+                            Merkurius
+                        </div>
+                        <div class="card-body">
+                            Merkurius merupakan planet yang terdekat dengan pusat tata surya yaitu Matahari dengan jarak 58.000.000 km. Planet ini sering disebut dengan bintang pagi karena kadang-kadang wujudnya terlihat menjelang Matahari terbit. <br><br>Diameter planet Merkurius sekitar 4.862, membuatnya menjadi planet terkecil. Periode rotasi Merkurius menghabiskan waktu selama 59 hari, sedangkan waktu untuk satu kali revolusi mengelilingi Matahari adalah 88 hari.
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-4">
+                    <img src="img/png/venus.png" class="img-fluid rotate">
+                </div>
+                <div class="col-6">
+                    <div class="card p-3">
+                        <div class="card-title text-center h2">
+                            Venus
+                        </div>
+                        <div class="card-body">
+                            Planet kedua yang terletak dekat dengan tata surya adalah planet venus. Diameter planet venus mencapai 12.104 km, menjadikannya planet keenam terbesar dalam tata surya. Selain itu, Venus juga merupakan planet terpanas dalam tata surya dengan suhu mencapai 475 C. <br><br>
+                            Planet Venus membutuhkan waktu berotasi selama 243 hari, sedangkan untuk berevolusi mengelilingi Matahari butuh waktu setara dengan 225 hari.
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-4">
+                    <img src="img/png/bumi.png" class="img-fluid rotate">
+                </div>
+                <div class="col-6">
+                    <div class="card p-3">
+                        <div class="card-title text-center h2">
+                            Bumi
+                        </div>
+                        <div class="card-body">
+                            Bumi merupakan planet ketiga pada tata surya kita. Bumi tersusun dari batuan dan didominasi dengan perairan. Hal tersebut membuat bumi menjadi satu-satunya planet yang memungkinkan untuk ditinggali oleh makhluk hidup. <br><br>
+                            Bumi berotasi pada porosnya membutuhkan waktu selama 24 jam, sedangkan untuk berevolusi mengelilingi Matahari membutuhkan waktu selama 365 hari.
+                    </div>
+                </div>
+                </div>
+                
+                <div class="col-4">
+                    <img src="img/png/mars.png" class="img-fluid rotate">
+                </div>
+                <div class="col-6">
+                    <div class="card p-3">
+                        <div class="card-title text-center h2">
+                            Mars
+                        </div>
+                        <div class="card-body">
+                            Mars merupakan planet keempat di tata surya. Mars juga dijuluki sebagai planet merah karena permukaannya yang berwarna kemerahan akibat adanya unsur besi yang teroksidasi hingga menimbulkan warna merah. <br><br>
+                            Mars memiliki atmosfer yang sangat tipis, dingin, berdebu, padang pasir atau gurun. Planet Mars juga memiliki banyak gunung besar dan lembah yang dalam. Selain itu, planet ini sering terjadi badai angin dibandingkan dengan planet lainnya.
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-4">
+                    <img src="img/png/jupiter.png" class="img-fluid rotate">
+                </div>
+                <div class="col-6">
+                    <div class="card p-3">
+                        <div class="card-title text-center h2">
+                            Jupiter
+                        </div>
+                        <div class="card-body">
+                            Jupiter adalah planet terbesar yang ada di tata surya, diameternya mencapai 139.820 km. Bahkan, ukurannya yang besar tersebut diumpamakan mampu memuat semua planet yang ada di tata surya. <br><br>
+                            Jupiter juga memiliki kerapatan yang relatif kecil, yaitu kurang dari kepadatan air serta berat jenisnya yang lebih kecil jika dibandingkan dari berat jenis air. Waktu yang dibutuhkan planet Jupiter untuk berotasi adalah selama 10 jam, sedangkan untuk berevolusi mengelilingi Matahari membutuhkan waktu selama 12 tahun.
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-4">
+                    <img src="img/png/saturnus.png" class="img-fluid rotate">
+                </div>
+                <div class="col-6">
+                    <div class="card p-3">
+                        <div class="card-title text-center h2">
+                            Saturnus
+                        </div>
+                        <div class="card-body">
+                            Saturnus berjarak sekitar 1.425 juta km dari Matahari dengan periode rotasi 10 jam 2 menit, sedangkan untuk berevolusi membutuhkan waktu selama 29,5 tahun. Planet ini merupakan planet terbesar kedua dengan diameter 120.500 km dengan massa 2,68 x 1026 kg.
+                            <br><br>
+                            Planet ini dilengkapi dengan cincin raksasa yang terdiri dari es dan batuan-batuan yang besar. Planet ini memiliki 9 satelit yaitu Mimas, Enceladus, Dione, Rhea, Tethys, Hyperion, Titan, Lapetus dan Phoebe.
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-4">
+                    <img src="img/png/uranus.png" class="img-fluid rotate">
+                </div>
+                <div class="col-6">
+                    <div class="card p-3">
+                        <div class="card-title text-center h2">
+                            Uranus
+                        </div>
+                        <div class="card-body">
+                            Uranus merupakan planet ketujuh dalam tata surya. Planet ini merupakan planet terbesar ketiga pada sistem tata surya, dengan diameter 51.000 km atau sekitar empat kali diameter Bumi. Uranus juga merupakan planet yang terkenal sangat dingin dengan suhu mencapai -224 C.
+                            <br><br>
+                            Untuk memutari porosnya, Neptunus membutuhkan waktu selama 15,3 jam. Sedangkan untuk mengitari Matahari membutuhkan waktu selama 165 tahun.
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-4">
+                    <img src="img/png/neptunus.png" class="img-fluid rotate">
+                </div>
+                <div class="col-6">
+                    <div class="card p-3">
+                        <div class="card-title text-center h2">
+                            Neptunus
+                        </div>
+                        <div class="card-body">
+                            Neptunus merupakan planet yang jaraknya paling jauh dari tata surya, yaitu sejauh 4.495 juta km. Karena letaknya yang amat jauh tersebut membuat planet ini tampak seperti senja yang redup bahkan ketika siang hari.
+                            <br><br>
+                            Satu hari di planet ini setara dengan 16 jam di planet bumi. Sedangkan untuk berevolusi mengelilingi Matahari membutuhkan waktu 165 jam.
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-12 d-flex justify-content-end">
+                    <button class="btn btn-large btn-light w-25" id="button">
+                        <a href="halaman-utama.html" class="text-dark">Selesaikan</a>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
